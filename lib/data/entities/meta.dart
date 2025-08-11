@@ -1,3 +1,6 @@
+part of '_entities.dart';
+
+@JsonSerializable()
 class Meta {
   final String? createdAt;
   final String? updatedAt;
@@ -10,4 +13,8 @@ class Meta {
     this.qrCode, 
     this.updatedAt, 
   });
+
+    factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+
+  Map<String, dynamic> toJson() => _$MetaToJson(this);
 }

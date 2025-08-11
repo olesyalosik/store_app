@@ -1,3 +1,6 @@
+part of '_entities.dart';
+
+@JsonSerializable()
 class Dimensions {
   final double? width;
   final double? height;
@@ -8,4 +11,8 @@ class Dimensions {
     this.depth,
     this.height,
   });
+
+  factory Dimensions.fromJson(Map<String, dynamic> json) => _$DimensionsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DimensionsToJson(this);
 }

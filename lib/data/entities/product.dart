@@ -1,7 +1,6 @@
-import 'package:store_app/data/entities/dimensions.dart';
-import 'package:store_app/data/entities/meta.dart';
-import 'package:store_app/data/entities/review.dart';
+part of '_entities.dart';
 
+@JsonSerializable()
 class Product {
 final int? id;
 final String? title;
@@ -50,4 +49,8 @@ this.thumbnail,
 this.warrantyInformation, 
 this.weight,
   });
+
+    factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductToJson(this);
 }
