@@ -8,25 +8,31 @@ class AddToCartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     if (addedToCart == null || addedToCart == 0) {
       return Container(
+        alignment: AlignmentDirectional.center,
         decoration: BoxDecoration(
           color: Colors.orangeAccent,
           borderRadius: BorderRadius.all(Radius.circular(15.0)),
         ),
         width: MediaQuery.of(context).size.width * 0.3,
         height: 30.0,
+        child: Text('Add to cart', textAlign: TextAlign.center),
       );
     } else {
       return SizedBox(
         width: MediaQuery.of(context).size.width * 0.3,
         height: 30.0,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               decoration: BoxDecoration(
                 color: Colors.orangeAccent,
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
               ),
-              child: Icon(Icons.add),
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Icon(Icons.add),
+              ),
             ),
             Text(addedToCart!.toString()),
             Container(
@@ -34,7 +40,10 @@ class AddToCartButton extends StatelessWidget {
                 color: Colors.orangeAccent,
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
               ),
-              child: Icon(Icons.remove),
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Icon(Icons.remove),
+              ),
             ),
           ],
         ),

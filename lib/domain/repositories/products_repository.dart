@@ -1,9 +1,7 @@
+import 'package:store_app/domain/models/_models.dart';
 
-import 'package:store_app/domain/models/_models.dart';abstract class ProductsRepository {
+abstract class ProductsRepositoryAbstract {
+  Future<ProductsListModel> getProductsList({required int page});
 
-const ProductsRepository();
-
-Future<ProductsListModel> getProductsList(String url);
-
-Future<ProductModel> getProductInfo(String url);
+  Future<ProductModel> getProductInfo({required int id});
 }

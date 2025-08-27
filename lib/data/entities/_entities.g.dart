@@ -111,13 +111,13 @@ ProductsList _$ProductsListFromJson(Map<String, dynamic> json) => ProductsList(
       .map((e) => Product.fromJson(e as Map<String, dynamic>))
       .toList(),
   skip: (json['skip'] as num?)?.toInt(),
-  totalRows: (json['totalRows'] as num?)?.toInt(),
+  totalRows: (json['total'] as num?)?.toInt(),
 );
 
 Map<String, dynamic> _$ProductsListToJson(ProductsList instance) =>
     <String, dynamic>{
       'products': instance.products,
-      'totalRows': instance.totalRows,
+      'total': instance.totalRows,
       'skip': instance.skip,
       'limit': instance.limit,
     };

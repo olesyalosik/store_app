@@ -30,11 +30,11 @@ extension ProductConverter on Product {
       reviews: product.reviews
           ?.map(
             (e) => ReviewModel(
-              rating: e?.rating,
-              comment: e?.comment,
-              date: e?.date,
-              reviewerEmail: e?.reviewerEmail,
-              reviewerName: e?.reviewerName,
+              rating: e.rating,
+              comment: e.comment,
+              date: e.date,
+              reviewerEmail: e.reviewerEmail,
+              reviewerName: e.reviewerName,
             ),
           )
           .toList(),
@@ -45,6 +45,7 @@ extension ProductConverter on Product {
       thumbnail: product.thumbnail,
       warrantyInformation: product.warrantyInformation,
       weight: product.weight,
+      itemsInCart: null,
     );
   }
 }
