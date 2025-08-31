@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:store_app/screens/cart/ui/cart_screen.dart';
 import 'package:store_app/screens/home_screen/bloc/home_bloc.dart';
+import 'package:store_app/screens/home_screen/ui/home_screen.dart';
 import 'package:store_app/screens/home_screen/ui/widgets/load_more_button.dart';
 import 'package:store_app/screens/home_screen/ui/widgets/product_tile.dart';
 
@@ -24,13 +26,6 @@ class _HomeFormState extends State<HomeForm> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          elevation: 100.0,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.abc), label: ''),
-          ],
-        ),
         body: BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             if (state is HomeStateSuccess) {
