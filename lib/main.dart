@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:store_app/core/di/app_di.dart';
+import 'package:store_app/core_ui/themes/app_themes.dart';
 import 'package:store_app/data/di/data_di.dart';
 import 'package:store_app/domain/repositories/products_repository.dart';
 import 'package:store_app/navigation/app_router.dart';
-import 'package:store_app/screens/cart/bloc/cart_bloc.dart';
-import 'package:store_app/screens/home_screen/bloc/home_bloc.dart';
+import 'package:store_app/presentation/blocs/cart_bloc/cart_bloc.dart';
+import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
+import 'package:store_app/presentation/blocs/theme_bloc/theme_bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +17,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +29,13 @@ class MyApp extends StatelessWidget {
           )..add(InitEvent()),
         ),
         BlocProvider(create: (_) => CartBloc()),
+        BlocProvider(create: (_) => ThemeBloc()),
       ],
-      child: MaterialApp.router(
-        routerConfig: appLocator.get<AppRouter>().config(),
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, state) => MaterialApp.router(
+          theme: state.isDark ? AppThemes.dark : AppThemes.light,
+          routerConfig: appLocator.get<AppRouter>().config(),
+        ),
       ),
     );
   }

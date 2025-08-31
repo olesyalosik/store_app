@@ -30,3 +30,23 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: SourGummy
+      fonts:
+        - asset: assets/fonts/SourGummy-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/SourGummy-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/SourGummy-Light.ttf
+          weight: 300
+        - asset: assets/fonts/SourGummy-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SourGummy-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/SourGummy-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/SourGummy-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/SourGummy-ExtraBold.ttf
+          weight: 800

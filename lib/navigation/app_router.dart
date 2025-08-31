@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/screens/cart/ui/cart_screen.dart';
-import 'package:store_app/screens/details_screen/details_screen.dart';
-import 'package:store_app/screens/home_screen/ui/home_screen.dart';
-import 'package:store_app/screens/main_screen/main_screen.dart';
+import 'package:store_app/presentation/screens/cart/ui/cart_screen.dart';
+import 'package:store_app/presentation/screens/details_screen/details_screen.dart';
+import 'package:store_app/presentation/screens/home_screen/ui/home_screen.dart';
+import 'package:store_app/presentation/screens/main_screen/main_screen.dart';
 
 part 'app_router.gr.dart';
 
