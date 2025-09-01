@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:store_app/core_ui/colors/app_colors.dart';
+import 'package:store_app/core_ui/core_ui.dart';
 
 class ImageContainer extends StatelessWidget {
   final String image;

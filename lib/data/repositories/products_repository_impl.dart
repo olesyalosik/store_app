@@ -1,11 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:store_app/data/converters/product_converter.dart';
-import 'package:store_app/data/converters/products_list_converter.dart';
-import 'package:store_app/data/repositories/helpers/error_helper.dart';
-import 'package:store_app/data/services/network_services/products_service.dart';
-import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/domain/models/product_filter.dart';
-import 'package:store_app/domain/repositories/products_repository.dart';
+import 'package:store_app/data/data.dart';
+import 'package:store_app/domain/domain.dart';
 import 'package:multiple_result/multiple_result.dart';
 
 class ProductsRepository extends ProductsRepositoryAbstract {

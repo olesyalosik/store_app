@@ -1,6 +1,4 @@
-import 'package:equatable/equatable.dart';
-import 'package:store_app/domain/enums/category.dart';
-import 'package:store_app/domain/enums/sort_pair.dart';
+part of '_models.dart';
 
 class ProductFilter extends Equatable {
   final SortPair? sortBy;

@@ -1,7 +1,5 @@
-import 'package:store_app/data/converters/product_converter.dart';
-import 'package:store_app/data/services/database_sevices/cart_database_service.dart';
-import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/domain/repositories/cart_repository.dart';
+import 'package:store_app/data/data.dart';
+import 'package:store_app/domain/domain.dart';
 
 class CartRepositoryImpl implements CartRepositoryAbstract {
   final CartDatabaseService _databaseService;

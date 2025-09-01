@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:store_app/core/di/app_di.dart';
-import 'package:store_app/domain/enums/category.dart';
-import 'package:store_app/domain/enums/sort_pair.dart';
+import 'package:store_app/domain/domain.dart';
 import 'package:store_app/navigation/app_router.dart';
 import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
 

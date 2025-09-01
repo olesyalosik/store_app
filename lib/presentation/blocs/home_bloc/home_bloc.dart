@@ -1,10 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/data/entities/_entities.dart';
-import 'package:store_app/domain/enums/category.dart';
-import 'package:store_app/domain/enums/sort_pair.dart';
-import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/domain/models/product_filter.dart';
-import 'package:store_app/domain/repositories/products_repository.dart';
+import 'package:store_app/domain/domain.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';

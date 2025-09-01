@@ -1,6 +1,5 @@
 import 'package:multiple_result/multiple_result.dart';
 import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/domain/models/product_filter.dart';
 
 abstract class ProductsRepositoryAbstract {
   Future<Result<ProductsListModel, String>> getProductsList({

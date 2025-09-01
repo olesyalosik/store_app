@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/core_ui/text_styles/app_text_styles.dart';
+import 'package:store_app/core_ui/core_ui.dart';
 import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
 
 class LoadMoreButton extends StatelessWidget {

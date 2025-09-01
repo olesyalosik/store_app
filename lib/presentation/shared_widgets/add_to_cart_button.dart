@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/core_ui/colors/app_colors.dart';
-import 'package:store_app/core_ui/text_styles/app_text_styles.dart';
-import 'package:store_app/domain/models/_models.dart';
+import 'package:store_app/core_ui/core_ui.dart';
+import 'package:store_app/domain/domain.dart';
 import 'package:store_app/presentation/blocs/cart_bloc/cart_bloc.dart';
 
 class AddToCartButton extends StatelessWidget {

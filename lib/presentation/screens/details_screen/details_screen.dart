@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app/core/di/app_di.dart';
-import 'package:store_app/domain/models/_models.dart';
+import 'package:store_app/domain/domain.dart';
 import 'package:store_app/navigation/app_router.dart';
 import 'package:store_app/presentation/screens/details_screen/widgets/image_container.dart';
 import 'package:store_app/presentation/shared_widgets/add_to_cart_button.dart';

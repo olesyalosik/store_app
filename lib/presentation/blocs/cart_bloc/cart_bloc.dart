@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/domain/models/_models.dart';
-import 'package:store_app/domain/repositories/cart_repository.dart';
+import 'package:store_app/domain/domain.dart';
 
 part 'cart_event.dart';
 part 'cart_state.dart';

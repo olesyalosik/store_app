@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/domain/models/_models.dart';
+import 'package:store_app/domain/domain.dart';
 import 'package:store_app/presentation/blocs/cart_bloc/cart_bloc.dart';
 import 'package:store_app/presentation/shared_widgets/add_to_cart_button.dart';
 
