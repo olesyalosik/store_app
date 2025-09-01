@@ -12,7 +12,7 @@ A cross-platform Flutter app, which provides catalogue of products, detailed inf
 ---
 
 ## Installation
-Requirements:
+Requirements:  
 Flutter: >= 3.13.0  
 Dart: >= 3.1.0  
   
