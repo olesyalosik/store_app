@@ -6,7 +6,6 @@ A cross-platform Flutter app, which provides catalogue of products, detailed inf
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
 - [Features](#features)
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
