@@ -8,9 +8,14 @@ class ProductsService {
   static const _baseUrl = 'https://dummyjson.com/products';
   static const _itemsPerPage = 30;
 
-  Future<ProductsList> getProductsList({required int page}) async {
+  Future<ProductsList> getProductsList({
+    required int page,
+    String? sortType,
+    String? sortBy,
+    String? category,
+  }) async {
     final url =
-        '$_baseUrl?limit=$_itemsPerPage&skip=${(page - 1) * _itemsPerPage}';
+        '$_baseUrl${category == null ? '' : '/category/$category'}?limit=$_itemsPerPage&skip=${(page - 1) * _itemsPerPage}&order=${sortType ?? ''}&sortBy=${sortBy ?? ''}';
 
     final response = await _client.get(url);
     return ProductsList.fromJson(response.data);

@@ -13,7 +13,10 @@ class CartTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: BoxBorder.all(color: Colors.amber, width: 2.0),
+        border: BoxBorder.all(
+          color: Theme.of(context).primaryColor,
+          width: 2.0,
+        ),
         borderRadius: BorderRadius.all(Radius.circular(15.0)),
       ),
       child: Padding(
@@ -60,7 +63,10 @@ class CartTile extends StatelessWidget {
                 onTap: () => BlocProvider.of<CartBloc>(
                   context,
                 ).add(DeleteFromCart(product: product)),
-                child: Icon(Icons.delete, color: Colors.red),
+                child: Icon(
+                  Icons.delete,
+                  color: Theme.of(context).colorScheme.error,
+                ),
               ),
             ),
           ],

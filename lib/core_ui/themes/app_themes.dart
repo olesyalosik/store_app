@@ -9,6 +9,8 @@ class AppThemes {
     colorScheme: ColorScheme.dark(error: AppColors.errorColorDark),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: AppColors.primaryColorDark,
+      selectedLabelStyle: AppTextStyles.selectedLabelStyleDark,
+      unselectedLabelStyle: AppTextStyles.unSelectedLabelStyleDark,
     ),
     brightness: Brightness.dark,
     primaryTextTheme: TextTheme(
@@ -24,6 +26,8 @@ class AppThemes {
     colorScheme: ColorScheme.light(error: AppColors.errorColorLight),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: AppColors.primaryColorLight,
+      selectedLabelStyle: AppTextStyles.selectedLabelStyleLight,
+      unselectedLabelStyle: AppTextStyles.unSelectedLabelStyleLight,
     ),
     brightness: Brightness.light,
     primaryTextTheme: TextTheme(

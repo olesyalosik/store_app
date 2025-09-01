@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:store_app/domain/enums/category.dart';
+import 'package:store_app/domain/enums/sort_pair.dart';
 import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
+import 'package:store_app/presentation/screens/home_screen/ui/widgets/filter_dialog.dart';
 import 'package:store_app/presentation/screens/home_screen/ui/widgets/load_more_button.dart';
 import 'package:store_app/presentation/screens/home_screen/ui/widgets/product_tile.dart';
 import 'package:store_app/presentation/screens/home_screen/ui/widgets/theme_icon.dart';
@@ -14,7 +17,6 @@ class HomeForm extends StatefulWidget {
 
 class _HomeFormState extends State<HomeForm> {
   final ScrollController _scrollController = ScrollController();
-
   @override
   void dispose() {
     _scrollController.dispose();
@@ -29,7 +31,14 @@ class _HomeFormState extends State<HomeForm> {
           actions: [
             Padding(
               padding: EdgeInsetsGeometry.only(right: 10.0),
-              child: Icon(Icons.filter_alt),
+              child: GestureDetector(
+                onTap: () => showDialog(
+                  context: context,
+
+                  builder: (context) => FilterDialog(),
+                ),
+                child: Icon(Icons.filter_alt),
+              ),
             ),
             Padding(
               padding: EdgeInsetsGeometry.only(right: 10.0),

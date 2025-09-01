@@ -21,6 +21,18 @@ class AppTextStyles {
     fontSize: 20,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle selectedLabelStyleDark = TextStyle(
+    color: AppColors.primaryColorDark,
+    fontFamily: 'SourGummy',
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+  );
+  static const TextStyle unSelectedLabelStyleDark = TextStyle(
+    color: AppColors.textColorDark,
+    fontFamily: 'SourGummy',
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+  );
 
   //light
   static const TextStyle bodyTextSmallLight = TextStyle(
@@ -40,5 +52,17 @@ class AppTextStyles {
     fontFamily: 'SourGummy',
     fontSize: 20,
     fontWeight: FontWeight.w500,
+  );
+  static const TextStyle selectedLabelStyleLight = TextStyle(
+    color: AppColors.primaryColorLight,
+    fontFamily: 'SourGummy',
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+  );
+  static const TextStyle unSelectedLabelStyleLight = TextStyle(
+    color: AppColors.textColorLight,
+    fontFamily: 'SourGummy',
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
   );
 }

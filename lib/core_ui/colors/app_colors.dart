@@ -14,7 +14,7 @@ class AppColors {
   static const Color primaryColorDark = Color.fromRGBO(255, 198, 148, 1);
 
   static const Color textColorDark = Color.fromRGBO(255, 234, 213, 1);
-  static const Color errorColorDark = Color.fromRGBO(208, 105, 105, 1);
+  static const Color errorColorDark = Color.fromRGBO(255, 117, 117, 1);
 
   //light theme
 
