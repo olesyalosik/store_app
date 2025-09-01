@@ -12,8 +12,20 @@ A cross-platform Flutter app, which provides catalogue of products, detailed inf
 ---
 
 ## Installation
-
-
+Requirements:
+Flutter: >= 3.13.0  
+Dart: >= 3.1.0  
+  
+~ clone repository:  
+**git clone https://github.com/olesyalosik/store_app.git**  
+~ move to the root folder  
+**cd /store_app**  
+~ get dependencies  
+**flutter pub get**  
+~ get all available devices  
+**flutter devices**  
+~ run app on simulator  
+**flutter run -d "${simulator_id}"**  
 ## Features
 
 ## Home Page
