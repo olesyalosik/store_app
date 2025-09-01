@@ -23,6 +23,7 @@ class ProductTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 onTap: () => appLocator.get<AppRouter>().push(
@@ -31,7 +32,7 @@ class ProductTile extends StatelessWidget {
                 child: Column(
                   children: [
                     CachedNetworkImage(
-                      imageUrl: product.images![0],
+                      imageUrl: product.thumbnail!,
                       width: MediaQuery.of(context).size.width * 0.4,
                       height: 120,
                     ),
@@ -41,7 +42,7 @@ class ProductTile extends StatelessWidget {
                       style: Theme.of(context).primaryTextTheme.bodySmall,
                     ),
                     Text(
-                      (product.price ?? 0.0).toString(),
+                      "${(product.price ?? 0.0).toString()} \$",
                       style: Theme.of(context).primaryTextTheme.bodySmall,
                     ),
                   ],

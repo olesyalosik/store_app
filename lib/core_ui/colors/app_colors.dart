@@ -20,8 +20,8 @@ class AppColors {
 
   static const Color scaffoldBackgroundColorLight = Color.fromRGBO(
     255,
-    244,
-    244,
+    255,
+    255,
     1,
   );
 

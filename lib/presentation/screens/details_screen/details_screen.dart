@@ -84,7 +84,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ),
               ),
               Text(
-                (widget.model.price ?? 0).toString(),
+                "${(widget.model.price ?? 0.0).toString()} \$",
                 textAlign: TextAlign.start,
                 style: Theme.of(context).primaryTextTheme.bodyMedium,
               ),

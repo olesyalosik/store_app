@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/domain/enums/category.dart';
-import 'package:store_app/domain/enums/sort_pair.dart';
 import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
 import 'package:store_app/presentation/screens/home_screen/ui/widgets/filter_dialog.dart';
 import 'package:store_app/presentation/screens/home_screen/ui/widgets/load_more_button.dart';
@@ -30,7 +28,7 @@ class _HomeFormState extends State<HomeForm> {
         appBar: AppBar(
           actions: [
             Padding(
-              padding: EdgeInsetsGeometry.only(right: 10.0),
+              padding: EdgeInsetsGeometry.only(right: 20.0),
               child: GestureDetector(
                 onTap: () => showDialog(
                   context: context,
@@ -41,7 +39,7 @@ class _HomeFormState extends State<HomeForm> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsGeometry.only(right: 10.0),
+              padding: EdgeInsetsGeometry.only(right: 20.0),
               child: ThemeIcon(),
             ),
           ],
@@ -89,7 +87,11 @@ class _HomeFormState extends State<HomeForm> {
             } else if (state is HomeStateError) {
               return Center(child: Text(state.errorMessage));
             } else {
-              return const Center(child: CircularProgressIndicator());
+              return Center(
+                child: CircularProgressIndicator(
+                  color: Theme.of(context).primaryColor,
+                ),
+              );
             }
           },
         ),

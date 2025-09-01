@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:store_app/core_ui/text_styles/app_text_styles.dart';
 import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
 
 class LoadMoreButton extends StatelessWidget {
@@ -14,11 +15,15 @@ class LoadMoreButton extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
-            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
           ),
           child: Padding(
             padding: EdgeInsetsGeometry.symmetric(vertical: 10, horizontal: 20),
-            child: Text('Load More', textAlign: TextAlign.center),
+            child: Text(
+              'Load More',
+              textAlign: TextAlign.center,
+              style: AppTextStyles.bodyTextMediumLight,
+            ),
           ),
         ),
       ),

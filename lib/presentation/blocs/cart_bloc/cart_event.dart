@@ -2,6 +2,8 @@ part of 'cart_bloc.dart';
 
 abstract class CartEvent {}
 
+class CartInitEvent extends CartEvent {}
+
 class AddToCartEvent extends CartEvent {
   final ProductModel product;
   AddToCartEvent({required this.product});

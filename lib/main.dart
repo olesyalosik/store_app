@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:store_app/core/di/app_di.dart';
 import 'package:store_app/core_ui/themes/app_themes.dart';
 import 'package:store_app/data/di/data_di.dart';
+import 'package:store_app/domain/repositories/cart_repository.dart';
 import 'package:store_app/domain/repositories/products_repository.dart';
 import 'package:store_app/navigation/app_router.dart';
 import 'package:store_app/presentation/blocs/cart_bloc/cart_bloc.dart';
@@ -26,9 +27,13 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => HomeBloc(
             productsRepository: appLocator.get<ProductsRepositoryAbstract>(),
-          )..add(InitEvent()),
+          )..add(HomeInitEvent()),
         ),
-        BlocProvider(create: (_) => CartBloc()),
+        BlocProvider(
+          create: (_) =>
+              CartBloc(cartRepository: appLocator.get<CartRepositoryAbstract>())
+                ..add(CartInitEvent()),
+        ),
         BlocProvider(create: (_) => ThemeBloc()),
       ],
       child: BlocBuilder<ThemeBloc, ThemeState>(

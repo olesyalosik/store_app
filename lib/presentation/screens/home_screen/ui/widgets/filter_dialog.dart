@@ -28,6 +28,7 @@ class FilterDialog extends StatelessWidget {
                   style: Theme.of(context).primaryTextTheme.bodyMedium,
                 ),
                 DropdownMenu<SortPair>(
+                  textStyle: Theme.of(context).primaryTextTheme.bodyMedium,
                   dropdownMenuEntries: SortPair.values
                       .map(
                         (e) => DropdownMenuEntry(value: e, label: e.toString()),
@@ -46,6 +47,7 @@ class FilterDialog extends StatelessWidget {
                   style: Theme.of(context).primaryTextTheme.bodyMedium,
                 ),
                 DropdownMenu<CategoryEnum>(
+                  textStyle: Theme.of(context).primaryTextTheme.bodyMedium,
                   dropdownMenuEntries: CategoryEnum.values
                       .map((e) => DropdownMenuEntry(value: e, label: e.name))
                       .toList(),

@@ -23,32 +23,30 @@ class ProductModel {
   final MetaModel? meta;
   final String? thumbnail;
   final List<String>? images;
-  final int? itemsInCart;
 
   const ProductModel({
-    required this.id,
-    required this.title,
-    required this.availabilityStatus,
-    required this.brand,
-    required this.category,
-    required this.description,
-    required this.dimensions,
-    required this.discountePercentage,
-    required this.images,
-    required this.meta,
-    required this.minimumOrderQuantity,
-    required this.price,
-    required this.rating,
-    required this.returnPolicy,
-    required this.reviews,
-    required this.shippingInformation,
-    required this.sku,
-    required this.stock,
-    required this.tags,
-    required this.thumbnail,
-    required this.warrantyInformation,
-    required this.weight,
-    required this.itemsInCart,
+    this.id,
+    this.title,
+    this.availabilityStatus,
+    this.brand,
+    this.category,
+    this.description,
+    this.dimensions,
+    this.discountePercentage,
+    this.images,
+    this.meta,
+    this.minimumOrderQuantity,
+    this.price,
+    this.rating,
+    this.returnPolicy,
+    this.reviews,
+    this.shippingInformation,
+    this.sku,
+    this.stock,
+    this.tags,
+    this.thumbnail,
+    this.warrantyInformation,
+    this.weight,
   });
 
   ProductModel copyWith({
@@ -74,7 +72,6 @@ class ProductModel {
     MetaModel? meta,
     String? thumbnail,
     List<String>? images,
-    int? itemsInCart,
   }) => ProductModel(
     id: id ?? this.id,
     title: title ?? this.title,
@@ -98,6 +95,5 @@ class ProductModel {
     thumbnail: thumbnail ?? this.thumbnail,
     warrantyInformation: warrantyInformation ?? this.warrantyInformation,
     weight: weight ?? this.weight,
-    itemsInCart: itemsInCart ?? this.itemsInCart,
   );
 }

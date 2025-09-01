@@ -45,7 +45,22 @@ extension ProductConverter on Product {
       thumbnail: product.thumbnail,
       warrantyInformation: product.warrantyInformation,
       weight: product.weight,
-      itemsInCart: null,
     );
   }
+
+  static Map<String, dynamic> toMap(ProductModel model) {
+    return {
+      'id': model.id,
+      'price': model.price,
+      'title': model.title,
+      'thumbnail': model.thumbnail,
+    };
+  }
+
+  static ProductModel fromMap(Map<String, dynamic> map) => ProductModel(
+    id: map['id'],
+    title: map['title'],
+    thumbnail: map['thumbnail'],
+    price: map['price'],
+  );
 }

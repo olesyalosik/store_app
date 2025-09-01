@@ -28,7 +28,7 @@ class CartTile extends StatelessWidget {
             Flexible(
               flex: 1,
               child: CachedNetworkImage(
-                imageUrl: product.images![0],
+                imageUrl: product.thumbnail!,
                 height: 50,
               ),
             ),
@@ -44,8 +44,12 @@ class CartTile extends StatelessWidget {
                       product.title!,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).primaryTextTheme.bodySmall,
                     ),
-                    Text((product.price ?? 0).toString()),
+                    Text(
+                      "${(product.price ?? 0.0).toString()} \$",
+                      style: Theme.of(context).primaryTextTheme.bodySmall,
+                    ),
                   ],
                 ),
               ),

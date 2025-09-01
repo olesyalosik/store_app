@@ -18,6 +18,9 @@ class AppThemes {
       bodyMedium: AppTextStyles.bodyTextMediumDark,
       bodyLarge: AppTextStyles.bodyTextLargeDark,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundColorDark,
+    ),
   );
 
   static ThemeData get light => ThemeData(
@@ -34,6 +37,9 @@ class AppThemes {
       bodySmall: AppTextStyles.bodyTextSmallLight,
       bodyMedium: AppTextStyles.bodyTextMediumLight,
       bodyLarge: AppTextStyles.bodyTextLargeLight,
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundColorLight,
     ),
   );
 }
