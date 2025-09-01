@@ -22,6 +22,7 @@ dependencies:
   equatable: ^2.0.7
   sqflite: ^2.4.2
   path: ^1.9.1
+  multiple_result: ^5.2.0
 
 dev_dependencies:
   flutter_test:

@@ -85,7 +85,28 @@ class _HomeFormState extends State<HomeForm> {
                 ),
               );
             } else if (state is HomeStateError) {
-              return Center(child: Text(state.errorMessage));
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      state.errorMessage,
+                      style: Theme.of(context).primaryTextTheme.bodyLarge,
+                    ),
+                    SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: () => BlocProvider.of<HomeBloc>(
+                        context,
+                      ).add(HomeInitEvent()),
+                      child: Icon(
+                        Icons.refresh,
+                        color: Theme.of(context).primaryColor,
+                        size: 50,
+                      ),
+                    ),
+                  ],
+                ),
+              );
             } else {
               return Center(
                 child: CircularProgressIndicator(

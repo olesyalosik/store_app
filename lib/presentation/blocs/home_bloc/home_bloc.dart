@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:store_app/data/entities/_entities.dart';
 import 'package:store_app/domain/enums/category.dart';
 import 'package:store_app/domain/enums/sort_pair.dart';
 import 'package:store_app/domain/models/_models.dart';
@@ -23,21 +24,26 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<void> _init(HomeInitEvent event, Emitter<HomeState> emit) async {
-    try {
-      final productsList = await _productsRepository.getProductsList(
-        page: currPage,
+    final productsListResult = await _productsRepository.getProductsList(
+      page: currPage,
+    );
+    if (productsListResult.isError()) {
+      emit(
+        HomeStateError(
+          errorMessage: productsListResult.tryGetError() ?? 'Unexpected error',
+        ),
       );
-      products.addAll(productsList.products);
+    } else {
+      final productsList = productsListResult.tryGetSuccess();
+      products.addAll(productsList?.products ?? []);
 
       emit(
         HomeStateSuccess(
           products: products,
-          canLoadMore: (productsList.totalRows ?? 0) > products.length,
+          canLoadMore: (productsList?.totalRows ?? 0) > products.length,
           isLoadingMore: false,
         ),
       );
-    } catch (e) {
-      emit(HomeStateError(errorMessage: e.toString()));
     }
   }
 
@@ -58,22 +64,28 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         ),
       );
     }
-    try {
-      final productsList = await _productsRepository.getProductsList(
-        page: currPage,
-        filter: appliedFilter,
+
+    final productsListResult = await _productsRepository.getProductsList(
+      page: currPage,
+      filter: appliedFilter,
+    );
+    if (productsListResult.isError()) {
+      emit(
+        HomeStateError(
+          errorMessage: productsListResult.tryGetError() ?? 'Unexpected error',
+        ),
       );
-      products.addAll(productsList.products);
+    } else {
+      final productsList = productsListResult.tryGetSuccess();
+      products.addAll(productsList?.products ?? []);
 
       emit(
         HomeStateSuccess(
           products: products,
-          canLoadMore: (productsList.totalRows ?? 0) > products.length,
+          canLoadMore: (productsList?.totalRows ?? 0) > products.length,
           isLoadingMore: false,
         ),
       );
-    } catch (e) {
-      emit(HomeStateError(errorMessage: e.toString()));
     }
   }
 

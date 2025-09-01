@@ -1,11 +1,12 @@
+import 'package:multiple_result/multiple_result.dart';
 import 'package:store_app/domain/models/_models.dart';
 import 'package:store_app/domain/models/product_filter.dart';
 
 abstract class ProductsRepositoryAbstract {
-  Future<ProductsListModel> getProductsList({
+  Future<Result<ProductsListModel, String>> getProductsList({
     required int page,
     ProductFilter? filter,
   });
 
-  Future<ProductModel> getProductInfo({required int id});
+  Future<Result<ProductModel, String>> getProductInfo({required int id});
 }
