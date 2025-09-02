@@ -1,5 +1,7 @@
 part of '_models.dart';
 
+/// Describes ProductModel
+
 class ProductModel {
   final int? id;
   final String? title;

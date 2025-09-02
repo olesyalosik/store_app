@@ -1,6 +1,8 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
+///
+/// Service to work with local cart database
 class CartDatabaseService {
   static const _dbName = 'cart.db';
   static const _dbVersion = 1;
@@ -8,12 +10,16 @@ class CartDatabaseService {
 
   static Database? _database;
 
+  ///
+  /// Method to getDatabase
   Future<Database> get database async {
     if (_database != null) return _database!;
     _database = await _initDatabase();
     return _database!;
   }
 
+  ///
+  /// Method to initialize database
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, _dbName);
@@ -34,6 +40,9 @@ class CartDatabaseService {
       },
     );
   }
+
+  ///
+  /// Method to increase quantity
 
   Future<void> addItem({required Map<String, dynamic> item}) async {
     final db = await database;
@@ -56,6 +65,8 @@ class CartDatabaseService {
     }
   }
 
+  ///
+  /// Method to decrease quantity
   Future<void> removeItem({required int id}) async {
     final db = await database;
     final existing = await db.query(
@@ -76,10 +87,16 @@ class CartDatabaseService {
     }
   }
 
+  ///
+  /// Method to get Products added to cart with their quantities from LDB
+
   Future<List<Map<String, dynamic>>> getItemsWithQuantity() async {
     final db = await database;
     return await db.query(_tableName);
   }
+
+  ///
+  /// Method to fully delete product from cart
 
   Future<void> deleteItem({required int id}) async {
     final db = await database;

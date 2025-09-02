@@ -1,6 +1,8 @@
-import 'package:store_app/data/converters/product_converter.dart';
+import 'package:store_app/domain/converters/product_converter.dart';
 import 'package:store_app/data/entities/_entities.dart';
 import 'package:store_app/domain/models/_models.dart';
+
+/// converter for ProductList
 
 extension ProductsListConverter on ProductsList {
   static ProductsListModel entityToModel(ProductsList productsList) {

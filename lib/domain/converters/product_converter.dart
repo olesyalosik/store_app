@@ -1,7 +1,11 @@
 import 'package:store_app/data/entities/_entities.dart';
 import 'package:store_app/domain/models/_models.dart';
 
+/// converter for Product
+
 extension ProductConverter on Product {
+  ///
+  /// Converts Product to ProductModel
   static ProductModel entityToModel(Product product) {
     return ProductModel(
       id: product.id,
@@ -48,6 +52,8 @@ extension ProductConverter on Product {
     );
   }
 
+  ///
+  /// Converts ProductModel to Map
   static Map<String, dynamic> toMap(ProductModel model) {
     return {
       'id': model.id,
@@ -57,6 +63,8 @@ extension ProductConverter on Product {
     };
   }
 
+  ///
+  /// Converts Map to ProductModel
   static ProductModel fromMap(Map<String, dynamic> map) => ProductModel(
     id: map['id'],
     title: map['title'],

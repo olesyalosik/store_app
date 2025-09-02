@@ -1,6 +1,6 @@
 part of '_models.dart';
 
-
+/// Describes ProductModel's dimensions
 class DimensionsModel {
   final double? width;
   final double? height;
@@ -11,5 +11,4 @@ class DimensionsModel {
     required this.depth,
     required this.height,
   });
-
 }

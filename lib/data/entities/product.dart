@@ -1,5 +1,8 @@
 part of '_entities.dart';
 
+///
+/// Describes single product
+
 @JsonSerializable()
 class Product {
   final int? id;

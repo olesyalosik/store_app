@@ -1,4 +1,7 @@
 part of '_entities.dart';
+
+///
+/// Describes product's review
 @JsonSerializable()
 class Review {
   final int? rating;
@@ -8,13 +11,13 @@ class Review {
   final String? reviewerEmail;
 
   const Review({
-    this.rating, 
-    this.comment, 
+    this.rating,
+    this.comment,
     this.date,
-    this.reviewerEmail, 
+    this.reviewerEmail,
     this.reviewerName,
   });
-    factory Review.fromJson(Map<String, dynamic> json) => _$ReviewFromJson(json);
+  factory Review.fromJson(Map<String, dynamic> json) => _$ReviewFromJson(json);
 
   Map<String, dynamic> toJson() => _$ReviewToJson(this);
 }

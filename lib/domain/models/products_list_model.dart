@@ -1,4 +1,6 @@
 part of '_models.dart';
+
+/// Describes ProductModel list
 class ProductsListModel {
   final List<ProductModel> products;
   final int? totalRows;
@@ -11,6 +13,4 @@ class ProductsListModel {
     required this.skip,
     required this.totalRows,
   });
-
-
 }

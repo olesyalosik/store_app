@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/core_ui/colors/app_colors.dart';
 
+/// Application textStyles
+
 class AppTextStyles {
   //dark
   static const TextStyle bodyTextSmallDark = TextStyle(

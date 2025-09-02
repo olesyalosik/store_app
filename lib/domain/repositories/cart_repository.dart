@@ -1,5 +1,7 @@
 import 'package:store_app/domain/models/_models.dart';
 
+/// Describes which Methods should be realized in CartRepository
+
 abstract class CartRepositoryAbstract {
   Future<List<(ProductModel product, int quantity)>> getCartProducts();
 

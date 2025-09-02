@@ -1,3 +1,5 @@
+/// List of all  categories of product available in App
+
 enum CategoryEnum {
   beauty,
   fragrances,

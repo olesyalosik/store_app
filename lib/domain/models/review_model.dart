@@ -1,4 +1,6 @@
 part of '_models.dart';
+
+/// Describes ProductModel's review
 class ReviewModel {
   final int? rating;
   final String? comment;
@@ -7,10 +9,10 @@ class ReviewModel {
   final String? reviewerEmail;
 
   const ReviewModel({
-   required  this.rating, 
-   required  this.comment, 
-   required  this.date,
-   required  this.reviewerEmail, 
+    required this.rating,
+    required this.comment,
+    required this.date,
+    required this.reviewerEmail,
     required this.reviewerName,
   });
 }

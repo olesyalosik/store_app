@@ -1,5 +1,8 @@
 part of '_entities.dart';
 
+///
+/// Describes list of product
+
 @JsonSerializable()
 class ProductsList {
   final List<Product> products;

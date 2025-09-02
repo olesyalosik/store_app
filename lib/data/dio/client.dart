@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
 
+///
+/// Define DIO client
+
 class Client {
   final Dio _dio;
 

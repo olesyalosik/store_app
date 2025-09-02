@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+/// Application colors
 class AppColors {
   //dark theme
   static const Color scaffoldBackgroundColorDark = Color.fromRGBO(

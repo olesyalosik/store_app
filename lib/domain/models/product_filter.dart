@@ -1,5 +1,7 @@
 part of '_models.dart';
 
+/// Model to collect all applied filters (category, sortType) in one place
+
 class ProductFilter extends Equatable {
   final SortPair? sortBy;
   final CategoryEnum? category;

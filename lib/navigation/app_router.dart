@@ -8,6 +8,8 @@ import 'package:store_app/presentation/screens/main_screen/main_screen.dart';
 
 part 'app_router.gr.dart';
 
+/// class which describes all routes and navigation in the app
+
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class AppRouter extends RootStackRouter {
   @override

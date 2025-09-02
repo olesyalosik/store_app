@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:store_app/core/di/app_di.dart';
-import 'package:store_app/core_ui/themes/app_themes.dart';
-import 'package:store_app/data/di/data_di.dart';
-import 'package:store_app/domain/repositories/cart_repository.dart';
-import 'package:store_app/domain/repositories/products_repository.dart';
-import 'package:store_app/navigation/app_router.dart';
-import 'package:store_app/presentation/blocs/cart_bloc/cart_bloc.dart';
-import 'package:store_app/presentation/blocs/home_bloc/home_bloc.dart';
-import 'package:store_app/presentation/blocs/theme_bloc/theme_bloc.dart';
+import 'package:store_app/core/core.dart';
+import 'package:store_app/core_ui/core_ui.dart';
+import 'package:store_app/data/data.dart';
+import 'package:store_app/domain/domain.dart';
+import 'package:store_app/navigation/navigation.dart';
+import 'package:store_app/presentation/blocs/blocs.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

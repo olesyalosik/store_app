@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:store_app/core_ui/colors/app_colors.dart';
 import 'package:store_app/core_ui/text_styles/app_text_styles.dart';
 
+/// Application themes
+
 class AppThemes {
   static ThemeData get dark => ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorDark,

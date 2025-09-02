@@ -3,11 +3,16 @@ import 'package:store_app/data/data.dart';
 import 'package:store_app/domain/domain.dart';
 import 'package:multiple_result/multiple_result.dart';
 
+///
+/// Defines logic of ProductsRepository methods
 class ProductsRepository extends ProductsRepositoryAbstract {
   final ProductsService _productsService;
   ProductsRepository({required ProductsService productsService})
     : _productsService = productsService;
 
+  ///
+  /// Methos to get list of products
+  /// Includes logic connected with filtration and sorting
   @override
   Future<Result<ProductsListModel, String>> getProductsList({
     required int page,
@@ -28,6 +33,8 @@ class ProductsRepository extends ProductsRepositoryAbstract {
     }
   }
 
+  ///
+  /// Method to get information about single product
   @override
   Future<Result<ProductModel, String>> getProductInfo({required int id}) async {
     try {
